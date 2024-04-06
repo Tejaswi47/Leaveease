@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/applyleave.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('fdashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{url_for('fdashboard')}}"><li>Back</li></a>
+        </ul>
+    </nav>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <h1 class="heading">Apply Leave</h1>
+    <div class="container">
+        <div class="apply-leave-box">
+            <form action="" method="post">
+                <label for="from">From</label>
+                <input type="datetime-local" id="from" name="from">
+
+                <label for="to">To</label>
+                <input type="datetime-local" id="to" name="to">
+
+                <label for="reason">Reason</label>
+                <select id="reason" name="Reason">
+                    <option value="casual">Casual</option>
+                    <option value="sickleave">SickLeave</option>
+                    <option value="function">Function</option>
+                    <option value="vacation">Vacation</option>    
+                </select>
+                
+                <button type="submit">Submit</button>
+                </form>
+                <a href="{{url_for('fdashboard')}}"><button>Back</button></a>
+        </div>
+    </div>
+</body>
+</html>

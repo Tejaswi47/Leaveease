@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaveEase</title>
+    <link rel="stylesheet" href="../static/HigherOfficials.css" type="text/css">
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('index')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{url_for('index')}}"><li>Back</li></a>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <center style="margin-top: 10px; border:1px solid rgb(184, 34, 179); width: 500px; height:30px; position:relative; left:30%; color:blueviolet; padding:5px; box-shadow:1px 5px 5px rgb(179, 46, 245); border-radius:20px;"><b>{{ message }}</b></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png"alt="background">
+    <div class="container">
+        <div class="login-box">
+            <form action="" method="post">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="admincode">Higher Official ID</label>
+                    <input type="text" name="admincode" id="admincode" placeholder="ex: #60021" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="abcdAbcd" required>
+                </div>
+                <button type="submit">Login</button>
+                <p id="new-one">If you are a new user, <a href="{{url_for('signup')}}">click here to sign up</a>.</p>
+            </form>
+            <p id="forgot-password"><a href="">Forgot Password????</a></p>
+        </div>
+    </div>
+    <h1 id="heading">Welcome Back!</h1>
+    <h2 id="heading-2">Login to Continue...</h2>
+</body>
+</html>

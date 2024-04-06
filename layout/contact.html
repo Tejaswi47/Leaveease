@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/contact.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('index')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{ url_for('index') }}"><li>Back</li></a>
+        </ul>
+    </nav>
+    <h1 class="heading">Contact Me:</h1>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <form action="" method="post">
+        <label for="facultyid">Faculty ID</label>
+        <input type="number" name="facultyid" id="facultyid" required>
+        <label for="whathappend">What Happend?</label>
+        <textarea type="text" name="whathappend" id="whathappend" row="4" column="30" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/faculty_workload.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('fdashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{url_for('fdashboard')}}"><li>Back</li></a>
+        </ul>
+    </nav>
+    <table class="table-content">
+    <thead>
+        <tr>
+            <th>Workload Id</th>
+            <th>Workload Description</th>
+            <th>Submission Date</th>
+            <th>Status</th>
+            <th>Acceptance Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for workload in workloads %}
+            <tr>
+                {% for work in workload %}
+                    <td>{{ work }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <div class="piechart" style="--completed: {{ count }}%; --notcompleted: {{ ncount }}%;"></div>
+    <div class="green"></div>
+    <div class="red"></div>
+    <p id="green">Completed</p>
+    <p id="red">Not Completed</p>
+</body>
+</html>

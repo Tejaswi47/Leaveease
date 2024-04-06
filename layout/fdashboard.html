@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/fdashboard.css" type="text/css">
+    <title>LeaveEase</title>
+</head>
+<body>
+     <nav>
+        <a href="{{url_for('fdashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{url_for('applyleave')}}"><li>Apply Leave</li></a>
+            <a href="{{url_for('leavestatus')}}"><li>Leave Status</li></a>
+            <a href="{{url_for('facultyworkload')}}"><li>My WorkLoad</li></a>
+            <a href="{{url_for('updateworkload')}}"><li>Update WorkLoad</li></a>
+            <a href="{{ url_for('flogout') }}"><li>Logout</li></a>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <center style="margin-top: 10px; border:1px solid rgb(184, 34, 179); width: 400px; height:30px; position:relative; left:40%; color:blueviolet; padding:5px; box-shadow:1px 5px 5px rgb(179, 46, 245); border-radius:20px;"><b>{{ message }}</b></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <div class="container">
+        <div class="profile-box">
+            <h1>Profile</h1>
+            <p>Name:   {{data['username']}}</p>
+            <p>Email: {{data['email']}}</p>
+            <p>College: {{data['college']}}</p>
+            <p>Role: {{data['role']}}</p>
+            <p>Address: {{data['address']}}</p>
+            <p>PhoneNumber: {{data['phonenumber']}}</p>
+            <p>Allocated Leaves: {{data['AllocatedLeaves']}}</p>
+            <p>Leaves Taken:{{data['LeavesTaken']}}</p>
+        </div>
+        <img id="img-two" src="https://jained.jainuniversity.ac.in/login-assets/images/profile-img.png" alt="FacultyLogin">
+    </div>
+</body>
+</html>

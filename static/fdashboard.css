@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    font-size: 45px;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    color: rgb(210, 18, 210);
+    text-decoration: underline;
+}
+
+.logo:hover {
+    color: rgb(183, 26, 183);
+    cursor: pointer;
+}
+
+nav {
+    height: 90px;
+    line-height: 90px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 24px;
+    color: purple;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    color: rgb(189, 14, 189);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-box {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 480px;
+    height: 408px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 10px 10px 5px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+.profile-box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.profile-box p {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.profile-box h1{
+    text-align: center;
+    color: rgb(245, 22, 245);
+    text-decoration: underline;
+}
+
+#img-two {
+    position: absolute;
+    width: 500px;
+    border-radius: 20%;
+    top: 25%;
+    right: 18%;
+}
+#img-one{
+    position: absolute;
+    left: 15%;
+    top: 50px;
+    opacity: 0.2 ;
+    width: auto;
+    height: 700px;
+}

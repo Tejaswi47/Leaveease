@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/add_workload.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <h2 id="heading">Give Workload</h2>
+    <div class="container">
+        <div class="workload-box">
+            <form method="post">
+                <label for="facultyid">faculty_id:</label>
+                <select id="facultyid" name="faculty_id">
+                    {% for option in options %}
+                        {% for i in option%}
+                            <option value="{{option[0]}}">{{ option[0] }}</option>
+                        {% endfor %}
+                    {% endfor %}
+                </select>
+
+                <label for="workload_description">Workload Description:</label>
+                <textarea id="workload_description" name="workload_description" rows="4" cols="50"></textarea><br>
+                
+                <label for="submission_date">Submission Date:</label>
+                <input type="datetime-local" id="submission_date" name="submission_date"><br>
+                
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="pending">Pending</option>
+                    <option value="Urgent">Urgent</option> 
+                    <option value="completed">Completed</option>   
+                </select>
+                <br>
+                <label for="acceptance_date">Acceptance Date:</label>
+                <input type="datetime-local" id="acceptance_date" name="acceptance_date">
+                <button type="submit">Submit</button>
+            </form>
+            <a href="{{ url_for('higher_official_dashboard') }}"><button type="button">Back</button></a>
+        </div>
+    </div>
+</body>
+</html>

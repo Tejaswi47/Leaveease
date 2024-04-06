@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/hO_workload_seeing.css" type="text/css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('higher_official_dashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{ url_for('higher_official_dashboard') }}"><li>Back</li></a>
+        </ul>
+    </nav>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+    <h1 id="heading">See Facutly Workload</h1>
+    <div class="container">
+        <div class="workload-seeing-box">
+            <form action="#" method="post">
+                <label for="Faculty_id">Faculty_id & Name</label>
+                <select name="facultyidname" id="facultyidname">
+                    {% for option in options %}
+                        <option value="{{option[0]}}">{{ option[0] }}-{{option[1]}}</option>
+                {% endfor %}
+                </select>
+                <button type="Submit">submit</button>
+            </form>
+            <a href="{{url_for('higher_official_dashboard')}}"><button id="button-back" type="button">Back</button></a>
+        </div>
+    </div>
+</body>
+</html>

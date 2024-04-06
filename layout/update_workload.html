@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/update_workload.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    <h1 id="heading">Update Your Work</h1>
+    <nav>
+        <a href="{{url_for('fdashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{url_for('fdashboard')}}"><li>Back</li></a>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <center style="margin-top: 10px; border:1px solid rgb(184, 34, 179); width: 400px; height:30px; position:relative; left:40%; color:blueviolet; padding:5px; box-shadow:1px 5px 5px rgb(179, 46, 245); border-radius:20px;"><b>{{ message }}</b></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        <div class="update-box">
+            <form action="#" method="post" >
+                <label for="workloaddescription">Workload Description: </label>
+                <select id="workloaddescription" name="workload_description">
+                  {% for workload in workloads %}
+                    {% for i in workload %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                {% endfor %}
+                </select>
+            
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>   
+                </select>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/manage_leaves.css">
+    <title>LeaveEase</title>
+</head>
+<body>
+    {{typeofs}}
+     <nav>
+        <a href="{{url_for('higher_official_dashboard')}}"><label class="logo">LeaveEase</label></a>
+        <ul>
+            <a href="{{ url_for('higher_official_dashboard')}}"><li>Back</li></a>
+        </ul>
+    </nav>
+    <img id="img-one" src="https://d5xbq9ewmzbc4.cloudfront.net/wp-content/uploads/2022/12/Facing-Issues-With-Leave-Management_-.png" alt="background">
+</body>
+    <div class="container1">
+        <div class="completed">
+            <h1 class="heading1">Tasks Completed People</h1>
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Workload Id</th>
+                        <th>Faculty Id</th>
+                        <th>Faculty Name</th>
+                        <th>Workload Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workload in workloads %}
+                        <tr>
+                            {% for work in workload %}
+                                <td>{{ work }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="notcompleted">
+            <h1 class="heading2">Tasks Not Completed People</h1>
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Workload Id</th>
+                        <th>Faculty Id</th>
+                        <th>Faculty Name</th>
+                        <th>Workload Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workload in notWorkloads %}
+                        <tr>
+                            {% for work in workload %}
+                                <td>{{ work }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="leaveapplicants">
+            <h1 class="heading3">Leave Applicants</h1>
+            <table class="table-content">
+                <thead>
+                    <tr>
+                        <th>Leave Id</th>
+                        <th>Faculty Id</th>
+                        <th>Faculty Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for application in applications %}
+                        <tr>
+                            {% for faculty in application %}
+                                <td>{{ faculty }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="manage-leave-box">
+            <form action="" method="post">
+                <h1 class="manageleave">Manage Leave</h1>
+                <label for="facultyidname">Faculty ID & Name</label>
+                <select name="facultyidname" id="facultyidname">
+                    {% for option in options %}
+                        <option value="{{option[2]}}">{{ option[0] }}-{{option[1]}} - {{option[2]}}</option>
+                    {% endfor %}
+                </select>
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</html>

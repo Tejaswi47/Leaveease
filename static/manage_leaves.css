@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    font-size: 45px;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    color: rgb(210, 18, 210);
+    text-decoration: underline;
+}
+
+.logo:hover {
+    color: rgb(183, 26, 183);
+    cursor: pointer;
+}
+
+nav {
+    height: 90px;
+    line-height: 90px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 24px;
+    color: purple;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: rgb(189, 14, 189);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+#img-one {
+    position: absolute;
+    left: 15%;
+    top: 50px;
+    opacity: 0.2;
+    width: auto;
+    height: 700px;
+}
+.table-content {
+    position: absolute;
+    border-collapse: collapse;
+    top: 25%;
+    left: 15%;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.table-content:hover {
+    transform: scale(1.02);
+}
+
+.table-content thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-content th,
+.table-content td {
+    padding: 12px 15px;
+}
+
+.table-content tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-content tbody tr:nth-last-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-content tbody tr:nth-last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table-content tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.container1{
+    position: relative;
+    width: 800px;
+    left: -120px;
+    height: 350px;
+    
+}
+.container2{
+    width: 1000px;
+    height: 350px;
+}
+.container3{
+    width: 1000px;
+    height: 360px;
+}
+.container4{
+    width: 1000px;
+    height: 400px;
+}
+
+.completed{
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    overflow: auto;
+    
+}
+.completed::-webkit-scrollbar{
+    display: none;
+}
+.notcompleted{
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    overflow: auto;
+    top: 12%;
+    right: 0%;
+
+}
+.notcompleted::-webkit-scrollbar{
+    display: none;
+}
+.heading1{
+    position: absolute;
+    left: 28%;
+    top: 10%;
+    color: #07715c;
+    text-decoration: underline;
+}
+.heading2{
+    position: absolute;
+    left: 29%;
+    top: 10%;
+    color: rgb(191, 55, 191);
+    text-decoration: underline;
+}
+.heading3 {
+    position: absolute;
+    left: 29%;
+    top: 10%;
+    color: #07715c;
+    text-decoration: underline;
+}
+.leaveapplicants{
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    width: 900px;
+    height: 350px;
+    overflow: auto;
+}
+.leaveapplicants::-webkit-scrollbar{
+    display: none;
+}
+.manage-leave-box {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 400px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-leave-box:hover {
+    transform: scale(1.1);
+}
+
+.manageleave {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(191, 55, 191);
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: purple;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+select:hover{
+    cursor: pointer;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(189, 14, 189);
+}

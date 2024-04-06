@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Times, serif;
+    font-size: 45px;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    color: rgb(210, 18, 210);
+    text-decoration: underline;
+}
+.logo:hover {
+    color: rgb(183, 26, 183);
+    cursor: pointer;
+}
+nav {
+    height: 90px;
+    line-height: 90px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 25px;
+    color: purple;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: rgb(189, 14, 189);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    position: absolute;
+    top: 60%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box {
+    width: 400px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(189, 14, 189);
+}
+
+img{
+    position: absolute;
+    top:13%;
+}
+#heading{
+    position: absolute;
+    color: rgb(189, 14, 189);
+    font-size:50px ;
+    top: 20%;
+    left: 40%;
+}
+#heading-2{
+    position: absolute;
+    color: rgb(197, 63, 197);
+    top: 29%;
+    left: 45%;
+}
+#new-one{
+    position: relative;
+    margin-top: 13px;
+    left: 6px;
+}
+#forgot-password{
+    position: relative;
+    left: 24%;
+    margin-top: 10px;
+}
+#img-one {
+    position: absolute;
+    left: 15%;
+    top: 50px;
+    opacity: 0.15;
+    width: auto;
+    height: 700px;
+    z-index: 0;
+}
